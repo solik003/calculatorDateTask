@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+    margin: 20px auto;
+    margin-left: 40px; 
+    background-color:bisque;
+  }
+  main {
+    margin-top: 20px;
+  }
+  label {
+    font-weight: bold;
+    display: inline-block;
+  }
+  button {
+    padding: 10px 30px;
+    margin-right: 10px;
+    border-radius: 4px;
+    background-color:burlywood;
+  }
+  .button-container button {
+    padding: 10px 30px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #result {
+    font-weight: bold;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+  }
+  input[type="date"] {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px;
+    border-radius: 4px;
+    background-color:burlywood;
+  }
+  .tab-content {
+    display: none;
+    padding: 20px;
+    border: 1px solid gray;
+    border-top: none;
+  }
+  table {
+    width: 50%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+  }
+  th {
+    background-color:burlywood;
+    border: 1px black;
+    padding: 8px;
+    text-align: left;
+  }
+  td {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  tr:nth-child(even) {
+    background-color: burlywood;
+  }
+  #clearTableButton{
+    border: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .presets-container {
+    text-align: left;
+    margin-bottom: 10px; 
+  }
+  .calculation-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+@media (max-width: 768px) {
+  .tab button {
+      font-size: 14px; 
+  }
+
+  .tabcontent {
+      padding: 10px; 
+  }
+}
+.title {
+  margin: 30px 0;
+  padding: 0;
+  color: #4c6067;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+}
+.tablinks:hover {
+  background-color: burlywood;
+  cursor: pointer;
+}
+.active {
+  display: block;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+label {
+  margin-bottom: 5px; 
+  text-align: left;
+}
+
+select {
+  margin-bottom: 10px; 
+  width: 20%;
+}
+#submitButton{
+  margin-bottom: 20px;
+}
+
+
+  

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- <h1 class="title">Final Task</h1>   -->
+</head>
+
+<body>
+  <div class="tab">
+    <span class="tablinks active" onclick="openTab(event, 'dateCalculator')">Date Calculator |</span>
+    <span class="tablinks" onclick="openTab(event, 'countryList')">Country List</span>
+  </div>
+  
+
+  <div id="dateCalculator" class="tabcontent" >
+    <div class="presets-container">
+      <label>Presets:</label>
+      <button type="button" onclick="setDateRangeWeek()">Week</button>
+      <button type="button" onclick="setDateRangeMonth()">Month</button>
+    </div>
+
+    <div>
+      <label>Select a date range:</label>
+    </div>
+
+    <form>
+        <label for="date1">Date 1:</label>
+        <input type="date" id="date1" name="date1" oninput="enableDate2()" required><br><br>
+    
+        <label for="date2">Date 2:</label>
+        <input type="date" id="date2" name="date2" disabled><br><br>
+
+        <label>Сalculation options</label>
+    
+        <div class="calculation-options">
+          <div class="button-container">
+            <button type="button" onclick="calculateDays()">Days</button>
+            <button type="button" onclick="calculateWeekdays()">Weekdays</button>
+            <button type="button" onclick="calculateWeekends()">Weekends</button>
+          </div>
+          <div class="button-container">
+            <button type="button" onclick="calculateHours()">Hours</button>
+            <button type="button" onclick="calculateMinutes()">Minutes</button>
+            <button type="button" onclick="calculateSeconds()">Seconds</button>
+          </div>
+        </div>
+      </form>
+      <p id="result"></p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="resultsTableBody">
+        </tbody>
+      </table>
+      <button id="clearTableButton">Clear Table</button>
+  </div>
+
+  <div id="countryList" class="tabcontent">
+    <h2>Holidays</h2>
+    <form id="holidaySearchForm">
+      <div class="form-group">
+        <label for="countryDropdown">Select a Country:</label>
+        <select id="countryDropdown" placeholder="Search for a country" autofocus>
+
+        </select>
+        
+      </div>
+      <div class="form-group">
+        <label for="yearDropdown">Select a Year:</label>
+        <select id="yearDropdown" placeholder="Search for a year" autofocus>
+
+        </select>
+      </div>
+      
+      <button type="submit" id="submitButton">SUBMIT</button>
+      <span class="msg"></span>
+    </form>
+    
+    <div id="holidayResult">
+      <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Holiday</th>
+            </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+
+  <script type="module" src="https://cdn.jsdelivr.net/npm/date-fns@2.23.0/esm/index.js"></script>
+  <script src="script.js"></script>
+  <script src="tab2.js"></script>
+  <!-- <script type="module" src="dataCalculator.js"></script> -->
+  <!-- <script type="module" src="services.js"></script> -->
+  
+</body>
+</html>
